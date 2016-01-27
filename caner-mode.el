@@ -8,7 +8,7 @@
   (insert "caner"))
 
 (define-minor-mode caner-mode
-  "Get your free caner's in the right places!"
+  "Get your free caners in the right places!"
   :lighter " caner"
   :keymap (let ((map (make-sparse-keymap)))
 	    (define-key map (kbd "C-i c") 'insert-caner)
@@ -17,3 +17,9 @@
 (add-hook 'racket-mode-hook 'caner-mode)
 
 (provide 'caner-mode)
+
+;; replace all keys pointing to a certain command with one of your own choosing by using the remap event :
+
+; (define-key (current-global-map) [remap kill-line] 'my-homemade-kill-line)
+
+;; globally remap all key binds that point to kill-line to my-homemade-kill-line
