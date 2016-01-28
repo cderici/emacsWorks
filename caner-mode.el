@@ -1,3 +1,5 @@
+(require 'regexp-opt)
+
 (make-variable-buffer-local
  (defvar caner-count 0
    "# of caner's inserted into the current buffer"))
